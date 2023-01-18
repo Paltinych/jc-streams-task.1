@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -11,5 +12,20 @@ public class Main {
                 .filter(x -> x % 2 == 0)
                 .sorted(Comparator.naturalOrder())
                 .forEach(System.out::println);
+
+        System.out.println();   // для разделения вывода
+
+        List<Integer> number = new ArrayList<>();
+        for (int num : intList) {
+            if (num > 0 && num % 2 == 0) {
+                number.add(num);
+            }
+        }
+        number.sort(Comparator.naturalOrder());
+        for (int num : number) {
+            System.out.println(num);
+        }
     }
+
+
 }
